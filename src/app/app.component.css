@@ -1,0 +1,13 @@
+.mat-toolbar{
+  background-image: url("https://images.unsplash.com/photo-1585811518394-c6a3e61ba773?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 150px !important;
+  background-position: center;
+  
+}
+.fill-space{
+    flex: 1 1 auto;
+
+}

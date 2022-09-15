@@ -1,0 +1,46 @@
+<div class="container">
+    <mat-toolbar class="mat-toolbar">
+        <mat-toolbar-row>
+            <button mat-icon-button>
+                <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <app-category></app-category>
+
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav mode="side">
+            <!-- mode="side fonksiyonu sayfayla kaydırıyor." -->
+            <mat-nav-list>
+                <a class="nav-link active" mat-list-item routerLink="/products">
+                    <span data-feather="home" routerLink="products"></span>
+                    Mağaza <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-link" routerLink="product-add-1" mat-list-item>
+                    <span data-feather="file"></span>
+                    Ürün Ekle // Klasik Form
+                </a>
+                <a class="nav-link" routerLink="product-add-2" mat-list-item>
+                    <span data-feather="shopping-cart" routerLink="product-add-2"></span>
+                    Ürün Ekle // Reactive Form
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+
+
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+
+        <mat-sidenav-content>
+            <div style="height: 88vh;">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
+    
+</div>

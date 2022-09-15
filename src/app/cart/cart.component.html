@@ -1,0 +1,67 @@
+<ng-container>
+    <div class="cart-product">
+        <!-- <table class="table tble-responsive">
+            <thead>
+                <tr>
+                    <th>Ürün adı:</th>
+                    <th>Ürün Fotoğrafı: </th>
+                    <th>Tanım:</th>
+                    <th>Fiyat:</th>
+                    <th>Durum</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of products; let i =index">
+                    <td> {{i+1}}</td>
+                    <td>{{item.productName}}</td>
+                    <td>FOTO </td>
+                    <td>{{item.description}}</td>
+                    <td>Fiyat </td>
+                    <td><button (click)="removeItem(item)" class="btn btn-danger">
+                            <mat-icon>delete</mat-icon>
+                        </button></td>
+                </tr>
+            </tbody>
+        </table> -->
+    </div>
+
+</ng-container>
+<ng-container>
+    <div class="container">
+        <div class="cart">
+            <h5 class="card-title">Sepetim</h5>
+            <table class="table tble-responsive">
+                <thead>
+                    <tr>
+                        <th>Ürün ID:</th>
+                        <th>Ürün Adı: </th>
+                        <th>Tanım:</th>
+                        <th>Fiyat:</th>
+                        <th>Açıklama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of products; let i =index">
+                        <td> {{i+1}}</td>
+                        <td>{{item.productName}}</td>
+                        <td>FOTO </td>
+                        <td>{{item.unitPrice | currency : " TRY" }}</td>
+                        <td>{{item?.category?.description}}</td>
+                        <td><button (click)="removeItem(item)" class="btn btn-danger"><mat-icon>delete</mat-icon></button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button (click)="emptyCart()" class="btn btn-danger">Hepsini temizle</button>
+        </div>
+        
+        <div class="center">
+            <!-- <img src="https://www.kocatepekitap.com/img/sepeteklendi.png" alt="" class=> -->
+            <div class="cart-table">
+            </div>
+            <!-- <h4>Sepet Boş</h4> -->
+            <!-- <button class="btn btn-primary">Alışveriş yap</button> -->
+        </div>
+
+    </div>
+</ng-container>
